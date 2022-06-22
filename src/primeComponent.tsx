@@ -1,9 +1,11 @@
 import {useMemo,  useEffect, useState } from "react";
+import {MyContext} from './myContext'
+
 
 export default function PrimeComponent() {
   const [number, setNumber] = useState(1);
   const [inc, setInc] = useState(0);
-
+  
   //factorial is kept in memory even after comp re-render
   const factorial = useMemo(() => getFactorial(number), [number]);
   
@@ -16,7 +18,7 @@ export default function PrimeComponent() {
     setNumber(Number(event.target.value));
   };
   const onClick = () => setInc((i) => i + 1);
-
+  
   return (
     <div>
       Top Frame reloaded {inc} times

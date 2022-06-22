@@ -1,20 +1,29 @@
 .App {
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .Content {
-  background-color: #282c34;
+  
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.Mid{
-  flex-direction: row;
+.Mid, .Left, .Right{
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+}
+
+.Left, .Right{
+  display: flex;
+  align-self: stretch;
+}
+
+.Test{
+
 }
