@@ -1,6 +1,5 @@
 import {useMemo,  useEffect, useState } from "react";
-import {MyContext} from './myContext'
-
+import {Outlet} from 'react-router-dom'
 
 export default function PrimeComponent() {
   const [number, setNumber] = useState(1);
@@ -26,6 +25,7 @@ export default function PrimeComponent() {
       <input type="number" value={number} onChange={onChange} />
       is {factorial} <br></br>
       <button onClick={onClick}>Re-render</button>
+      <br></br><Outlet/>
     </div>
   );
 }
