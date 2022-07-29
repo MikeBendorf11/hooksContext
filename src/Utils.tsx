@@ -5,6 +5,7 @@ export class Utils{
     return new Promise(r=>setTimeout(r,m))
   } 
   static getText = async (filename: string)=> {
+    console.log(filename)
     let req = await fetch(filename)
     let txt = await req.text()
     return txt     

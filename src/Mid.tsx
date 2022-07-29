@@ -22,7 +22,7 @@ export function Mid(){
   React.useEffect(()=>{
     let changeText = async (num?:number) => {
       await Utils.delay(1000)
-      let text = await Utils.getText('basic'+num||'')
+      let text = await Utils.getText('/basic'+num||'')
       setContent(text)
       //console.log('text changed')
     }
@@ -45,7 +45,7 @@ export function Mid(){
     
     {/* async method defined outside of useEffect */}
     <button onClick={async ()=>{
-      let text = await Utils.getText('basic2')
+      let text = await Utils.getText('/basic2')
       setContent(text)
     }}>change top text</button>
     <button onClick={()=>setClicked(!clicked)}> bttn2</button>
